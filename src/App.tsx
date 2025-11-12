@@ -8,6 +8,7 @@ import Cantine from "./pages/Cantine";
 import Vini from "./pages/Vini";
 import Territorio from "./pages/Territorio";
 import Eventi from "./pages/Eventi";
+import Blog from "./pages/Blog";
 import About from "./pages/About";
 import Contatti from "./pages/Contatti";
 import NotFound from "./pages/NotFound";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/vini" element={<Vini />} />
           <Route path="/territorio" element={<Territorio />} />
           <Route path="/eventi" element={<Eventi />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
           <Route path="/contatti" element={<Contatti />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

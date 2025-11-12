@@ -21,6 +21,7 @@ export const Navbar = () => {
     { to: "/vini", label: "Vini" },
     { to: "/territorio", label: "Territorio" },
     { to: "/eventi", label: "Eventi" },
+    { to: "/blog", label: "Blog" },
     { to: "/about", label: "Chi Siamo" },
     { to: "/contatti", label: "Contatti" }
   ];
