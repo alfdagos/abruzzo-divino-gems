@@ -8,8 +8,14 @@ import { Link } from "react-router-dom";
 import { cantine } from "@/data/cantine";
 import { vini } from "@/data/vini";
 import wineCellarImage from "@/assets/wine-cellar.jpg";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Index = () => {
+  const { ref: cantineRef, isVisible: cantineVisible } = useScrollAnimation(0.2);
+  const { ref: viniRef, isVisible: viniVisible } = useScrollAnimation(0.2);
+  const { ref: territorioRef, isVisible: territorioVisible } = useScrollAnimation(0.2);
+  const { ref: newsletterRef, isVisible: newsletterVisible } = useScrollAnimation(0.2);
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -18,8 +24,13 @@ const Index = () => {
       {/* Cantine d'Eccellenza */}
       <section className="py-24 bg-cream">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-wine mb-4">
+          <div className="text-center mb-16">
+            <h2 
+              ref={cantineRef as React.RefObject<HTMLHeadingElement>}
+              className={`font-montserrat text-4xl md:text-5xl font-bold text-wine mb-4 transition-all duration-1000 ${
+                cantineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
               Cantine d'Eccellenza
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -74,8 +85,13 @@ const Index = () => {
       {/* Vini Iconici */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-wine mb-4">
+          <div className="text-center mb-16">
+            <h2 
+              ref={viniRef as React.RefObject<HTMLHeadingElement>}
+              className={`font-montserrat text-4xl md:text-5xl font-bold text-wine mb-4 transition-all duration-1000 ${
+                viniVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
               Vini Iconici
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -141,8 +157,13 @@ const Index = () => {
       <section className="py-24 bg-wine text-cream">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6">
+            <div>
+              <h2 
+                ref={territorioRef as React.RefObject<HTMLHeadingElement>}
+                className={`font-montserrat text-4xl md:text-5xl font-bold mb-6 transition-all duration-1000 ${
+                  territorioVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
                 Il Territorio
               </h2>
               <p className="text-lg text-cream/90 mb-6 leading-relaxed">
@@ -182,7 +203,12 @@ const Index = () => {
       <section className="py-24 bg-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-wine mb-4">
+            <h2 
+              ref={newsletterRef as React.RefObject<HTMLHeadingElement>}
+              className={`font-montserrat text-4xl md:text-5xl font-bold text-wine mb-4 transition-all duration-1000 ${
+                newsletterVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
               Resta Aggiornato
             </h2>
             <p className="text-lg text-muted-foreground mb-8">

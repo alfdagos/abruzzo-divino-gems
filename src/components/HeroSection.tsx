@@ -3,9 +3,11 @@ import { Button } from "./ui/button";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-vineyard.jpg";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation(0.2);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,8 +34,13 @@ export const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto animate-fade-in-up">
-        <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold text-cream mb-6 leading-tight">
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <h1 
+          ref={titleRef as React.RefObject<HTMLHeadingElement>}
+          className={`font-montserrat text-5xl md:text-7xl lg:text-8xl font-bold text-cream mb-6 leading-tight transition-all duration-1000 ${
+            titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           L'eleganza del vino abruzzese
           <span className="block text-gradient-gold mt-2">in ogni calice</span>
         </h1>

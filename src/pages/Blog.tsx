@@ -6,9 +6,11 @@ import { Calendar, User, Tag } from "lucide-react";
 import { blogPosts } from "@/data/blog";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Blog = () => {
   const [filtroCategoria, setFiltroCategoria] = useState<string | null>(null);
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation(0.2);
 
   const postiFiltrati = filtroCategoria
     ? blogPosts.filter(post => post.categoria === filtroCategoria)
@@ -23,7 +25,12 @@ const Blog = () => {
       {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-wine to-wine-dark text-cream">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+          <h1 
+            ref={titleRef as React.RefObject<HTMLHeadingElement>}
+            className={`font-montserrat text-5xl md:text-6xl font-bold mb-6 transition-all duration-1000 ${
+              titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             Blog Abruzzo diVino
           </h1>
           <p className="text-xl md:text-2xl text-cream/90 max-w-3xl mx-auto animate-fade-in-up">
