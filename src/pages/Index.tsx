@@ -27,7 +27,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 
               ref={cantineRef as React.RefObject<HTMLHeadingElement>}
-              className={`font-montserrat text-4xl md:text-5xl font-bold text-wine mb-4 transition-all duration-1000 ${
+              className={`font-playfair text-4xl md:text-5xl font-bold text-wine mb-4 transition-all duration-1000 ${
                 cantineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
@@ -88,7 +88,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 
               ref={viniRef as React.RefObject<HTMLHeadingElement>}
-              className={`font-montserrat text-4xl md:text-5xl font-bold text-wine mb-4 transition-all duration-1000 ${
+              className={`font-playfair text-4xl md:text-5xl font-bold text-wine mb-4 transition-all duration-1000 ${
                 viniVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
@@ -160,7 +160,7 @@ const Index = () => {
             <div>
               <h2 
                 ref={territorioRef as React.RefObject<HTMLHeadingElement>}
-                className={`font-montserrat text-4xl md:text-5xl font-bold mb-6 transition-all duration-1000 ${
+                className={`font-playfair text-4xl md:text-5xl font-bold mb-6 transition-all duration-1000 ${
                   territorioVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
@@ -205,7 +205,7 @@ const Index = () => {
           <div className="max-w-2xl mx-auto text-center">
             <h2 
               ref={newsletterRef as React.RefObject<HTMLHeadingElement>}
-              className={`font-montserrat text-4xl md:text-5xl font-bold text-wine mb-4 transition-all duration-1000 ${
+              className={`font-playfair text-4xl md:text-5xl font-bold text-wine mb-4 transition-all duration-1000 ${
                 newsletterVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >

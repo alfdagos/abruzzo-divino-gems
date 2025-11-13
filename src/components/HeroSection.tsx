@@ -37,7 +37,7 @@ export const HeroSection = () => {
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <h1 
           ref={titleRef as React.RefObject<HTMLHeadingElement>}
-          className={`font-montserrat text-5xl md:text-7xl lg:text-8xl font-bold text-cream mb-6 leading-tight transition-all duration-1000 ${
+          className={`font-playfair text-5xl md:text-7xl lg:text-8xl font-bold text-cream mb-6 leading-tight transition-all duration-1000 ${
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
