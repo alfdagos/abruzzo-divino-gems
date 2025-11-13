@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, User, Tag } from "lucide-react";
 import { blogPosts } from "@/data/blog";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const [filtroCategoria, setFiltroCategoria] = useState<string | null>(null);
@@ -67,11 +68,11 @@ const Blog = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {postiFiltrati.map((post, index) => (
-              <Card
-                key={post.id}
-                className="overflow-hidden hover-lift bg-card group"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+              <Link key={post.id} to={`/blog/${post.id}`}>
+                <Card
+                  className="overflow-hidden hover-lift bg-card group"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
                 <div className="aspect-[16/9] bg-gradient-to-br from-wine/10 to-wine/5 overflow-hidden">
                   <img
                     src={post.immagine}
@@ -135,6 +136,7 @@ const Blog = () => {
                   </button>
                 </div>
               </Card>
+              </Link>
             ))}
           </div>
         </div>
