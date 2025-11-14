@@ -45,10 +45,16 @@ const Index = () => {
                 className="overflow-hidden hover-lift bg-card group cursor-pointer"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="aspect-video bg-wine/10 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-wine/80 to-transparent z-10" />
-                  <Wine className="h-24 w-24 text-wine/20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:scale-110 transition-transform" />
-                </div>
+                <Link to={`/cantine/${cantina.id}`} className="block">
+                  <div className="aspect-video bg-wine/10 relative overflow-hidden">
+                    <img 
+                      src={cantina.immagine} 
+                      alt={cantina.nome}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-wine/80 to-transparent z-10" />
+                  </div>
+                </Link>
                 <div className="p-6">
                   <h3 className="font-playfair text-2xl font-bold text-wine mb-2">
                     {cantina.nome}
@@ -106,18 +112,24 @@ const Index = () => {
                 className="overflow-hidden hover-lift bg-card group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="aspect-[3/4] bg-gradient-to-b from-wine/5 to-wine/10 relative flex items-center justify-center">
-                  <Wine className="h-32 w-32 text-wine/20 group-hover:scale-110 transition-transform" />
-                  <div className="absolute top-4 right-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                      vino.tipologia === 'Rosso' ? 'bg-wine text-cream' :
-                      vino.tipologia === 'Bianco' ? 'bg-gold text-wine' :
-                      'bg-wine-light text-cream'
-                    }`}>
-                      {vino.tipologia}
-                    </span>
+                <Link to="/vini" className="block">
+                  <div className="aspect-[3/4] bg-gradient-to-b from-wine/5 to-wine/10 relative overflow-hidden">
+                    <img 
+                      src={vino.immagine} 
+                      alt={`${vino.nome} - ${vino.cantina}`}
+                      className="w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute top-4 right-4">
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                        vino.tipologia === 'Rosso' ? 'bg-wine text-cream' :
+                        vino.tipologia === 'Bianco' ? 'bg-gold text-wine' :
+                        'bg-wine-light text-cream'
+                      }`}>
+                        {vino.tipologia}
+                      </span>
+                    </div>
                   </div>
-                </div>
+                </Link>
                 <div className="p-6">
                   <h3 className="font-playfair text-xl font-bold text-wine mb-1">
                     {vino.nome}
