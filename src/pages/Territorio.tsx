@@ -1,8 +1,10 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
-import { Mountain, Grape, MapPin, Sunrise } from "lucide-react";
+import { Mountain, Grape, MapPin, Sunrise, Waves, Ship } from "lucide-react";
 import wineBottleImage from "@/assets/wine-bottle.jpg";
+import costaTrabocchiImage from "@/assets/costa-trabocchi.jpg";
+import granSassoImage from "@/assets/gran-sasso.jpg";
 
 const Territorio = () => {
   return (
@@ -158,8 +160,114 @@ const Territorio = () => {
         </div>
       </section>
 
+      {/* Costa dei Trabocchi - Mare */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="order-2 lg:order-1">
+              <img
+                src={costaTrabocchiImage}
+                alt="Costa dei Trabocchi"
+                className="w-full rounded-lg shadow-2xl"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <div className="flex items-center gap-3 mb-4">
+                <Waves className="h-10 w-10 text-wine" />
+                <h2 className="font-playfair text-4xl font-bold text-wine">
+                  La Costa dei Trabocchi
+                </h2>
+              </div>
+              <p className="text-lg text-foreground mb-4 leading-relaxed">
+                La Costa dei Trabocchi è un tratto di litorale adriatico unico al mondo, che si estende 
+                da Ortona a San Salvo. Il suo nome deriva dai <strong>trabocchi</strong>, antiche 
+                macchine da pesca su palafitte costruite interamente in legno che si protendono sul mare.
+              </p>
+              <p className="text-lg text-foreground mb-4 leading-relaxed">
+                Questi monumenti dell'ingegno marinaro, descritti da Gabriele D'Annunzio come 
+                "ragni colossali", sono diventati oggi anche ristoranti raffinati dove degustare 
+                il pesce freschissimo dell'Adriatico abbinato ai grandi bianchi abruzzesi.
+              </p>
+              <p className="text-lg text-foreground mb-6 leading-relaxed">
+                La vicinanza del mare porta alle vigne quella <strong>brezza salmastra e 
+                mineralità</strong> che caratterizzano vini come il Trebbiano e il Pecorino, 
+                regalando loro freschezza e sapidità uniche. La ventilazione costante mitiga 
+                il clima estivo e preserva l'acidità delle uve.
+              </p>
+              <Card className="p-6 bg-cream border-wine/20">
+                <h3 className="font-playfair text-xl font-bold text-wine mb-3 flex items-center gap-2">
+                  <Ship className="h-6 w-6" />
+                  Tradizione marinara e vino
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Il brodetto di pesce alla vastese, piatto principe della costa, trova 
+                  l'abbinamento perfetto con Trebbiano d'Abruzzo e Pecorino: vini che 
+                  nascono proprio sotto l'influenza di questo mare e ne portano l'impronta 
+                  salina nel calice.
+                </p>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gran Sasso - Montagna */}
+      <section className="py-16 bg-cream">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <Mountain className="h-10 w-10 text-wine" />
+                <h2 className="font-playfair text-4xl font-bold text-wine">
+                  Il Gran Sasso d'Italia
+                </h2>
+              </div>
+              <p className="text-lg text-foreground mb-4 leading-relaxed">
+                Con i suoi <strong>2.912 metri del Corno Grande</strong>, il Gran Sasso è la 
+                vetta più alta degli Appennini e il cuore pulsante dell'Abruzzo. Questa imponente 
+                catena montuosa non è solo uno spettacolo naturale mozzafiato, ma il vero artefice 
+                della qualità dei vini abruzzesi.
+              </p>
+              <p className="text-lg text-foreground mb-4 leading-relaxed">
+                Le sue <strong>escursioni termiche</strong> - con notti fresche anche in piena 
+                estate e giornate soleggiate - sono il segreto della complessità aromatica dei 
+                grandi Montepulciano. Il freddo notturno preserva acidità e freschezza, mentre 
+                il sole delle colline sottostanti garantisce perfetta maturazione fenolica.
+              </p>
+              <p className="text-lg text-foreground mb-6 leading-relaxed">
+                Le vigne piantate tra i <strong>300 e i 600 metri</strong> alle pendici del massiccio 
+                godono di un microclima unico: aria purissima, suoli poveri e pietrosi che costringono 
+                le radici a scavare in profondità, estraendo mineralità e complessità dal terreno calcareo.
+              </p>
+              <Card className="p-6 bg-background border-wine/20">
+                <h3 className="font-playfair text-xl font-bold text-wine mb-3">
+                  L'altitudine fa la differenza
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                  La Valle Peligna, protetta dal Gran Sasso e dalla Majella, ospita alcune delle 
+                  vigne più alte d'Abruzzo. Qui nascono vini di straordinaria eleganza e longevità, 
+                  come il San Calisto di Valle Reale.
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  La presenza della montagna regala anche <strong>acqua purissima</strong> dai 
+                  ghiacciai perenni, elemento fondamentale per la viticoltura di qualità e per 
+                  una delle tradizioni pastorali più antiche d'Italia.
+                </p>
+              </Card>
+            </div>
+            <div>
+              <img
+                src={granSassoImage}
+                alt="Gran Sasso d'Italia"
+                className="w-full rounded-lg shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Sapori del Territorio */}
-      <section className="py-16 bg-wine text-cream">
+      <section className="py-16 bg-wine text-cream">...
         <div className="container mx-auto px-4">
           <h2 className="font-playfair text-4xl font-bold text-center mb-12">
             I Sapori dell'Abruzzo
