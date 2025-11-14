@@ -31,8 +31,12 @@ const Vini = () => {
                 className="overflow-hidden hover-lift bg-card group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="aspect-[3/4] bg-gradient-to-b from-wine/5 to-wine/10 relative flex items-center justify-center">
-                  <Wine className="h-40 w-40 text-wine/20 group-hover:scale-110 transition-transform duration-500" />
+                <div className="aspect-[3/4] bg-gradient-to-b from-wine/5 to-wine/10 relative overflow-hidden">
+                  <img 
+                    src={vino.immagine} 
+                    alt={`${vino.nome} - ${vino.cantina}`}
+                    className="w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-500"
+                  />
                   <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
                     <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                       vino.tipologia === 'Rosso' ? 'bg-wine text-cream' :
