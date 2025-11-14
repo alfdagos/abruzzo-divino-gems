@@ -1,3 +1,10 @@
+import vinoValleRealeSanCalisto from "@/assets/vino-valle-reale-san-calisto.jpg";
+import vinoValentiniTrebbiano from "@/assets/vino-valentini-trebbiano.jpg";
+import vinoValentiniCerasuolo from "@/assets/vino-valentini-cerasuolo.jpg";
+import vinoTiberioPecorino from "@/assets/vino-tiberio-pecorino.jpg";
+import vinoTorreBeatiCocciapazza from "@/assets/vino-torre-beati-cocciapazza.jpg";
+import vinoMasciarelliVillaGemma from "@/assets/vino-masciarelli-villa-gemma.jpg";
+
 export interface Vino {
   id: string;
   nome: string;
@@ -32,7 +39,7 @@ export const vini: Vino[] = [
     },
     abbinamenti: ["Carni rosse alla griglia", "Brasati", "Formaggi stagionati", "Tartufo nero"],
     temperatura: "18-20°C",
-    immagine: "/src/assets/vino-valle-reale-san-calisto.jpg"
+    immagine: vinoValleRealeSanCalisto
   },
   {
     id: "trebbiano-valentini",
@@ -49,7 +56,7 @@ export const vini: Vino[] = [
     },
     abbinamenti: ["Pesce di mare", "Risotti ai funghi porcini", "Carni bianche elaborate"],
     temperatura: "12-14°C",
-    immagine: "/src/assets/vino-valentini-trebbiano.jpg"
+    immagine: vinoValentiniTrebbiano
   },
   {
     id: "cerasuolo-valentini",
@@ -66,7 +73,7 @@ export const vini: Vino[] = [
     },
     abbinamenti: ["Brodetto di pesce", "Arrosticini", "Primi piatti elaborati"],
     temperatura: "14-16°C",
-    immagine: "/src/assets/vino-valentini-cerasuolo.jpg"
+    immagine: vinoValentiniCerasuolo
   },
   {
     id: "pecorino-tiberio",
@@ -82,7 +89,7 @@ export const vini: Vino[] = [
     },
     abbinamenti: ["Crudi di mare", "Fritture di pesce", "Formaggi freschi"],
     temperatura: "10-12°C",
-    immagine: "/src/assets/vino-tiberio-pecorino.jpg"
+    immagine: vinoTiberioPecorino
   },
   {
     id: "montepulciano-cocciapazza",
@@ -98,7 +105,7 @@ export const vini: Vino[] = [
     },
     abbinamenti: ["Agnello al forno", "Stufati", "Formaggi pecorini stagionati"],
     temperatura: "16-18°C",
-    immagine: "/src/assets/vino-torre-beati-cocciapazza.jpg"
+    immagine: vinoTorreBeatiCocciapazza
   },
   {
     id: "villa-gemma",
@@ -115,6 +122,6 @@ export const vini: Vino[] = [
     },
     abbinamenti: ["Selvaggina", "Brasati al vino rosso", "Formaggi stagionati"],
     temperatura: "18-20°C",
-    immagine: "/src/assets/vino-masciarelli-villa-gemma.jpg"
+    immagine: vinoMasciarelliVillaGemma
   }
 ];
