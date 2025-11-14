@@ -32,7 +32,7 @@ export const vini: Vino[] = [
     },
     abbinamenti: ["Carni rosse alla griglia", "Brasati", "Formaggi stagionati", "Tartufo nero"],
     temperatura: "18-20°C",
-    immagine: "/assets/vino-1.jpg"
+    immagine: "/src/assets/vino-valle-reale-san-calisto.jpg"
   },
   {
     id: "trebbiano-valentini",
@@ -49,7 +49,7 @@ export const vini: Vino[] = [
     },
     abbinamenti: ["Pesce di mare", "Risotti ai funghi porcini", "Carni bianche elaborate"],
     temperatura: "12-14°C",
-    immagine: "/assets/vino-2.jpg"
+    immagine: "/src/assets/vino-valentini-trebbiano.jpg"
   },
   {
     id: "cerasuolo-valentini",
@@ -66,7 +66,7 @@ export const vini: Vino[] = [
     },
     abbinamenti: ["Brodetto di pesce", "Arrosticini", "Primi piatti elaborati"],
     temperatura: "14-16°C",
-    immagine: "/assets/vino-3.jpg"
+    immagine: "/src/assets/vino-valentini-cerasuolo.jpg"
   },
   {
     id: "pecorino-tiberio",
@@ -82,7 +82,7 @@ export const vini: Vino[] = [
     },
     abbinamenti: ["Crudi di mare", "Fritture di pesce", "Formaggi freschi"],
     temperatura: "10-12°C",
-    immagine: "/assets/vino-4.jpg"
+    immagine: "/src/assets/vino-tiberio-pecorino.jpg"
   },
   {
     id: "montepulciano-cocciapazza",
@@ -98,7 +98,7 @@ export const vini: Vino[] = [
     },
     abbinamenti: ["Agnello al forno", "Stufati", "Formaggi pecorini stagionati"],
     temperatura: "16-18°C",
-    immagine: "/assets/vino-5.jpg"
+    immagine: "/src/assets/vino-torre-beati-cocciapazza.jpg"
   },
   {
     id: "villa-gemma",
@@ -115,6 +115,6 @@ export const vini: Vino[] = [
     },
     abbinamenti: ["Selvaggina", "Brasati al vino rosso", "Formaggi stagionati"],
     temperatura: "18-20°C",
-    immagine: "/assets/vino-6.jpg"
+    immagine: "/src/assets/vino-masciarelli-villa-gemma.jpg"
   }
 ];
