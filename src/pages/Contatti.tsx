@@ -72,7 +72,7 @@ const Contatti = () => {
                   href="tel:+390861123456"
                   className="text-muted-foreground hover:text-gold transition-colors"
                 >
-                  +39 0861 123456
+                  +39 0871 62929
                 </a>
               </Card>
 
@@ -82,8 +82,8 @@ const Contatti = () => {
                   Sede
                 </h3>
                 <p className="text-muted-foreground">
-                  Via del Vino 1<br />
-                  65100 Pescara<br />
+                  Via Don Giovanni Minzoni 43<br />
+                  66100 Chieti<br />
                   Abruzzo, Italia
                 </p>
               </Card>
