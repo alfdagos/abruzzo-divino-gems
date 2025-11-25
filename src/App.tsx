@@ -27,8 +27,6 @@ const App = () => (
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ...existing code... */}
-          <Route path="/" element={<Index />} />
           <Route path="/cantine" element={<Cantine />} />
           <Route path="/cantine/:id" element={<CantinaDetail />} />
           <Route path="/vini" element={<Vini />} />
