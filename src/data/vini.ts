@@ -4,6 +4,7 @@ import vinoValentiniCerasuolo from "@/assets/vino-valentini-cerasuolo.jpg";
 import vinoTiberioPecorino from "@/assets/vino-tiberio-pecorino.jpg";
 import vinoTorreBeatiCocciapazza from "@/assets/vino-torre-beati-cocciapazza.jpg";
 import vinoMasciarelliVillaGemma from "@/assets/vino-masciarelli-villa-gemma.jpg";
+import vinoEmidioPepeMontepulciano from "@/assets/vino-emidio-pepe-montepulciano.jpg";
 
 export interface Vino {
   id: string;
@@ -123,5 +124,28 @@ export const vini: Vino[] = [
     abbinamenti: ["Selvaggina", "Brasati al vino rosso", "Formaggi stagionati"],
     temperatura: "18-20°C",
     immagine: vinoMasciarelliVillaGemma
+  },
+  {
+    id: "emidio-pepe-montepulciano",
+    nome: "Montepulciano d'Abruzzo",
+    cantina: "Emidio Pepe",
+    tipologia: "Rosso",
+    vitigno: "Montepulciano 100%",
+    annata: "2016",
+    descrizione: "Biodinamico e non filtrato, questo Montepulciano rappresenta l'espressione più pura del vitigno. Invecchiamento in bottiglia di almeno 5 anni prima del rilascio.",
+    noteDiDegustazione: {
+      vista: "Rubino intenso con riflessi granato",
+      olfatto: "Ciliegia matura, spezie dolci, note balsamiche e di erbe aromatiche",
+      gusto: "Corpo pieno, tannini setosi, grande persistenza e complessità"
+    },
+    abbinamenti: [
+      "Arrosticini abruzzesi",
+      "Agnello alla brace",
+      "Formaggi stagionati",
+      "Tartufo nero",
+      "Cacciagione"
+    ],
+    temperatura: "18-20°C",
+    immagine: vinoEmidioPepeMontepulciano
   }
 ];
