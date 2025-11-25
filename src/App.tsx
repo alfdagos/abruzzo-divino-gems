@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Cantine from "./pages/Cantine";
 import CantinaDetail from "./pages/CantinaDetail";
 import Vini from "./pages/Vini";
+import ViniDetail from "./pages/ViniDetail";
 import Territorio from "./pages/Territorio";
 import Eventi from "./pages/Eventi";
 import Blog from "./pages/Blog";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/cantine" element={<Cantine />} />
           <Route path="/cantine/:id" element={<CantinaDetail />} />
           <Route path="/vini" element={<Vini />} />
+          <Route path="/vini/:id" element={<ViniDetail />} />
           <Route path="/territorio" element={<Territorio />} />
           <Route path="/eventi" element={<Eventi />} />
           <Route path="/blog" element={<Blog />} />
