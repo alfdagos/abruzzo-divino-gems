@@ -82,8 +82,8 @@ const Contatti = () => {
                   Sede
                 </h3>
                 <p className="text-muted-foreground">
-                  Via Don Giovanni Minzoni 43<br />
-                  66100 Chieti<br />
+                  Via Don Giovanni Minzoni, 43<br />
+                  66100 CHIETI<br />
                   Abruzzo, Italia
                 </p>
               </Card>

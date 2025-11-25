@@ -32,7 +32,7 @@ jobs:
         
       - name: Build
         # IL TRUCCO: sovrascriviamo la base URL qui senza toccare vite.config.ts
-        run: npm run build -- --base=/${{ github.event.repository.name }}/
+        run: npm run build
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
